@@ -18,7 +18,9 @@
   "homepage": "https://github.com/shreyakarunakar/Angular-1#readme",
   "devDependencies": {
 
-    "angular": "1.5.8"
+    "angular": "1.5.8",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0"
 
   }
 }
