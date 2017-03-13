@@ -1,8 +1,9 @@
 <html ng-app="myRender">
 <head>
-    <link rel="stylesheet" href="app.css" />
-    <script src="../../node_modules/angular/angular.js"></script>
-    <script src="../controller/Render.js"></script>
+    <title>Angular 1</title>
+    <link rel="stylesheet" href="app/view/app.css" />
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app/controller/Render.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body ng-controller="myCtrl">
@@ -17,8 +18,9 @@
         <div class="nav-item" ng-click="requestJson(100000)">Render 100000 records</div>
     </div>
     </div>
-    <div ng-show="myResponse">
-    <p>DOM load for 1 record set</p>
+    <div class="container" ng-show="myResponse">
+    <div>
+    <p class="renderData">DOM load for {{id}} record set in ANGULAR </p>
     <div>
     <table>
        <tr>
@@ -37,6 +39,12 @@
     </tr>
     </table>
     </div>
+    </div>
+    <div class= "displayStat">
+            <p class="stat-head">DOM RENDERING TIME  </p>
+            <div><p> Complete time to for request to render => {{complete}} ms</p></div>
+            <button class="update-button" ng-click="update(id)">Update Records</button>
+        </div>
     </div>
 </div>
 </body>
